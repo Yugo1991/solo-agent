@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alex Morgan — DC Real Estate</title>
+  <meta name="description" content="Solo real estate agent helping buyers and sellers in the DMV. Listings, services, and free consultation." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header / Nav -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <!-- Simple SVG logo -->
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 10.5 12 3l9 7.5v9a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 19.5v-9z" fill="currentColor" opacity=".12"/>
+          <path d="M12 3 3 10.5h3V21h5.25v-5.25h1.5V21H18V10.5h3L12 3z" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">Alex Morgan</span>
+        <span class="brand-sub">Real Estate</span>
+      </a>
+
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="sr-only">Open menu</span>
+        <!-- hamburger -->
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+
+      <nav id="primaryNav" class="nav">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#listings">Listings</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a class="btn btn-sm" href="#contact">Book Consult</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1><span class="accent">DMV</span> Homes, Done Right.</h1>
+          <p class="lede">
+            Buying or selling in DC, Maryland, or Virginia? I provide boutique, end-to-end service—
+            from pricing strategy to keys in hand.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-lg" href="#contact">Free Consultation</a>
+            <a class="link" href="#listings">Browse Listings</a>
+          </div>
+          <ul class="badges" aria-label="Highlights">
+            <li>Top-rated local agent</li>
+            <li>Off-market access</li>
+            <li>No-pressure guidance</li>
+          </ul>
+        </div>
+        <div class="hero-media" role="img" aria-label="Modern living room">
+          <!-- decorative image via CSS background -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Services</h2>
+          <p>Tailored representation for buyers, sellers, and investors.</p>
+        </header>
+
+        <div class="grid cards reveal">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🏠</div>
+            <h3>Buyer Representation</h3>
+            <p>Neighborhood scouting, private showings, and winning offer strategies.</p>
+            <ul class="checklist">
+              <li>Lender matchmaking</li>
+              <li>Comparative market analysis</li>
+              <li>Skilled negotiation</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📈</div>
+            <h3>Seller Listing</h3>
+            <p>Data-driven pricing, pro photography, and targeted digital marketing.</p>
+            <ul class="checklist">
+              <li>Staging & prep plan</li>
+              <li>Open house management</li>
+              <li>Offer review & terms</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🏗️</div>
+            <h3>Investors</h3>
+            <p>Deal sourcing, ARV analysis, and vetted contractor referrals.</p>
+            <ul class="checklist">
+              <li>Rent comps</li>
+              <li>Cash-flow models</li>
+              <li>Portfolio strategy</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Listings -->
+    <section id="listings" class="section alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Featured Listings</h2>
+          <p>Hand-picked homes currently turning heads.</p>
+        </header>
+
+        <div class="filters">
+          <label class="sr-only" for="filterInput">Filter listings</label>
+          <input id="filterInput" class="input" type="text" placeholder="Filter by neighborhood, price, beds…" />
+          <button id="clearFilter" class="btn btn-ghost btn-sm" type="button">Clear</button>
+        </div>
+
+        <div id="listingGrid" class="grid listings reveal">
+          <!-- Cards populated by HTML (static) and enhanced by JS filter -->
+          <article class="listing-card" data-tags="capitol hill 2bd 650k dc townhouse">
+            <button class="img-wrap open-modal" data-modal="l1" aria-label="Open details for 123 A St SE">
+              <img src="https://images.unsplash.com/photo-1560184897-67f4b9d3b61f?q=80&w=1200&auto=format&fit=crop" alt="Brick townhouse exterior" loading="lazy" />
+            </button>
+            <div class="listing-body">
+              <h3>123 A St SE</h3>
+              <p>Capitol Hill, DC • 2 bd • 2 ba • 1,150 sq ft</p>
+              <div class="price">$649,900</div>
+              <div class="chip-row">
+                <span class="chip">Townhouse</span>
+                <span class="chip">Walkable</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing-card" data-tags="arlington 3bd 800k va single family yard">
+            <button class="img-wrap open-modal" data-modal="l2" aria-label="Open details for 908 Oak Ln">
+              <img src="https://images.unsplash.com/photo-1560448075-bb4caa6c8e0e?q=80&w=1200&auto=format&fit=crop" alt="Single-family home with yard" loading="lazy" />
+            </button>
+            <div class="listing-body">
+              <h3>908 Oak Ln</h3>
+              <p>Arlington, VA • 3 bd • 2.5 ba • 1,860 sq ft</p>
+              <div class="price">$799,000</div>
+              <div class="chip-row">
+                <span class="chip">Garage</span>
+                <span class="chip">Yard</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing-card" data-tags="silver spring 1bd 350k md condo metro">
+            <button class="img-wrap open-modal" data-modal="l3" aria-label="Open details for 77 Metro Pl #904">
+              <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="Condo interior living room" loading="lazy" />
+            </button>
+            <div class="listing-body">
+              <h3>77 Metro Pl #904</h3>
+              <p>Silver Spring, MD • 1 bd • 1 ba • 740 sq ft</p>
+              <div class="price">$349,000</div>
+              <div class="chip-row">
+                <span class="chip">Condo</span>
+                <span class="chip">Near Metro</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div class="about-media" role="img" aria-label="Agent portrait"></div>
+        <div class="about-copy">
+          <h2>About Alex</h2>
+          <p>
+            I’m a solo agent serving the Washington, DC metro. Clients choose me for my
+            clear communication, sharp pricing guidance, and calm, no-drama advocacy.
+            Whether it’s your first condo or your forever home, I’ll quarterback the process
+            so you can focus on what matters.
+          </p>
+          <ul class="stats">
+            <li><strong>8+</strong> years experience</li>
+            <li><strong>150+</strong> closings</li>
+            <li><strong>98%</strong> list-to-sale ratio</li>
+          </ul>
+          <a class="btn" href="#contact">Let’s Talk</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Client Reviews</h2>
+          <p>What past buyers and sellers are saying.</p>
+        </header>
+
+        <div class="grid testimonials reveal">
+          <figure class="quote">
+            <blockquote>
+              “Alex got us under contract in a weekend and negotiated repairs we didn’t think possible.”
+            </blockquote>
+            <figcaption>— R. Nguyen, Capitol Hill</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>
+              “Clear plan, daily updates, and we sold over ask. Couldn’t recommend more.”
+            </blockquote>
+            <figcaption>— J. Rivera, Arlington</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>
+              “As a first-time buyer I had a million questions—Alex answered every one.”
+            </blockquote>
+            <figcaption>— T. Harper, Silver Spring</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Book a Free Consultation</h2>
+          <p>Tell me a bit about your goals. I’ll reply within one business day.</p>
+        </header>
+
+        <form id="contactForm" class="form reveal" novalidate>
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name" />
+            <small class="error" data-for="name"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+            <small class="error" data-for="email"></small>
+          </div>
+
+          <div class="form-row two-col">
+            <div>
+              <label for="type">I’m looking to</label>
+              <select id="type" name="type" required>
+                <option value="">Select one</option>
+                <option>Buy</option>
+                <option>Sell</option>
+                <option>Invest</option>
+              </select>
+              <small class="error" data-for="type"></small>
+            </div>
+            <div>
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline" required>
+                <option value="">Select one</option>
+                <option>0–3 months</option>
+                <option>3–6 months</option>
+                <option>6+ months</option>
+              </select>
+              <small class="error" data-for="timeline"></small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Share details (neighborhoods, budget, etc.)"></textarea>
+          </div>
+
+          <fieldset class="form-row">
+            <legend>Have you used Fiverr for web projects?</legend>
+            <div class="radio-row">
+              <label><input type="radio" name="fiverr" value="yes" required /> Yes</label>
+              <label><input type="radio" name="fiverr" value="no" required /> No</label>
+            </div>
+            <small class="error" data-for="fiverr"></small>
+          </fieldset>
+
+          <button class="btn btn-lg" type="submit">Send Request</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Alex Morgan Real Estate • DC • MD • VA</p>
+      <nav aria-label="Footer links">
+        <a href="#services">Services</a>
+        <a href="#listings">Listings</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Listing Modals -->
+  <div id="l1" class="modal" role="dialog" aria-modal="true" aria-labelledby="l1-title" hidden>
+    <div class="modal-card">
+      <button class="modal-close" data-close>&times;<span class="sr-only">Close</span></button>
+      <h3 id="l1-title">123 A St SE, Washington, DC</h3>
+      <p>Charming brick rowhome steps from Eastern Market with updated kitchen and private patio.</p>
+      <ul class="modal-details">
+        <li>2 bed • 2 bath • 1,150 sq ft</li>
+        <li>Walk score 95</li>
+        <li>Near Metro • Private patio</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="l2" class="modal" role="dialog" aria-modal="true" aria-labelledby="l2-title" hidden>
+    <div class="modal-card">
+      <button class="modal-close" data-close>&times;<span class="sr-only">Close</span></button>
+      <h3 id="l2-title">908 Oak Ln, Arlington, VA</h3>
+      <p>Light-filled single-family with fenced yard and attached garage in a quiet cul-de-sac.</p>
+      <ul class="modal-details">
+        <li>3 bed • 2.5 bath • 1,860 sq ft</li>
+        <li>Renovated 2019</li>
+        <li>Minutes to Clarendon</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="l3" class="modal" role="dialog" aria-modal="true" aria-labelledby="l3-title" hidden>
+    <div class="modal-card">
+      <button class="modal-close" data-close>&times;<span class="sr-only">Close</span></button>
+      <h3 id="l3-title">77 Metro Pl #904, Silver Spring, MD</h3>
+      <p>Top-floor condo with floor-to-ceiling windows and garage parking, steps to Metro.</p>
+      <ul class="modal-details">
+        <li>1 bed • 1 bath • 740 sq ft</li>
+        <li>HOA $410/mo</li>
+        <li>Roof deck access</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
