@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/744e4fb40d.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Skip link -->
@@ -133,7 +134,7 @@
           <!-- Cards populated by HTML (static) and enhanced by JS filter -->
           <article class="listing-card" data-tags="capitol hill 2bd 650k dc townhouse">
             <button class="img-wrap open-modal" data-modal="l1" aria-label="Open details for 123 A St SE">
-              <img src="https://images.unsplash.com/photo-1560184897-67f4b9d3b61f?q=80&w=1200&auto=format&fit=crop" alt="Brick townhouse exterior" loading="lazy" />
+              <img src="img/house12.png" alt="Brick townhouse exterior" loading="lazy" />
             </button>
             <div class="listing-body">
               <h3>123 A St SE</h3>
@@ -148,7 +149,7 @@
 
           <article class="listing-card" data-tags="arlington 3bd 800k va single family yard">
             <button class="img-wrap open-modal" data-modal="l2" aria-label="Open details for 908 Oak Ln">
-              <img src="https://images.unsplash.com/photo-1560448075-bb4caa6c8e0e?q=80&w=1200&auto=format&fit=crop" alt="Single-family home with yard" loading="lazy" />
+              <img src="img/house9.png" alt="Single-family home with yard" loading="lazy" />
             </button>
             <div class="listing-body">
               <h3>908 Oak Ln</h3>
@@ -281,14 +282,7 @@
             <textarea id="message" name="message" rows="5" placeholder="Share details (neighborhoods, budget, etc.)"></textarea>
           </div>
 
-          <fieldset class="form-row">
-            <legend>Have you used Fiverr for web projects?</legend>
-            <div class="radio-row">
-              <label><input type="radio" name="fiverr" value="yes" required /> Yes</label>
-              <label><input type="radio" name="fiverr" value="no" required /> No</label>
-            </div>
-            <small class="error" data-for="fiverr"></small>
-          </fieldset>
+          
 
           <button class="btn btn-lg" type="submit">Send Request</button>
           <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
@@ -296,6 +290,17 @@
       </div>
     </section>
   </main>
+
+  <!-- Socials -->
+    <section id="socials" class="section">
+      <div id="socials-container">
+                    
+                    <i class="fa-brands fa-facebook" alt="My Facebook" onclick="location.href='#'" aria-hidden="true"></i>
+                    <i class="fa-solid fa-envelope" onclick="#"></i>
+                    <i class="fa-brands fa-tiktok" alt="My Tiktok" onclick="location.href='#'" aria-hidden="true"></i>
+                    <i class="fa-brands fa-instagram" alt="My Tiktok" onclick="location.href='#'" aria-hidden="true"></i>
+                </div>
+    </section>
 
   <!-- Footer -->
   <footer class="site-footer">

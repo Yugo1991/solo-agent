@@ -1,13 +1,13 @@
 /* Base */
 :root{
   --bg: #0b0f14;
-  --elev: #121822;
-  --card: #151c27;
-  --text: #ffffff;
-  --muted: #ffffff;
-  --accent: #ffffff;
-  --accent-2: #ffffff;
-  --line: #273142;
+  --elev: #fff;
+  --card: #;
+  --text: #000;
+  --muted: #000;
+  --accent: #ffff;
+  --accent-2: #940000;
+  --line: #000;
   --focus: #fafafa;
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --radius: 18px;
@@ -21,7 +21,7 @@ body{
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: var(--text);
   background: radial-gradient(1200px 600px at 75% -10%, rgba(143, 23, 23, 0.08), transparent),
-              linear-gradient(180deg, #000000 0%, #000000 100%);
+              linear-gradient(180deg, #ffffff79 0%, #ffffff 100%);
   line-height: 1.6;
 }
 
@@ -53,7 +53,7 @@ img{ max-width: 100%; display: block }
 /* Header */
 .site-header{
   position: sticky; top:0; z-index: 50;
-  background: rgba(152, 5, 5, 0.75);
+  background: rgba(152, 5, 5, 0.725);
   backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -105,7 +105,7 @@ img{ max-width: 100%; display: block }
 .accent{ color: var(--accent-2) }
 .hero-media{
   min-height: 320px; border-radius: var(--radius-lg);
-  background: url('https://images.unsplash.com/photo-1505692794403-34d4982f88aa?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  background: url('img/a.png') center/cover no-repeat;
   box-shadow: var(--shadow); border:1px solid var(--line);
 }
 
@@ -123,7 +123,7 @@ img{ max-width: 100%; display: block }
 /* Buttons & Inputs */
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
-  border:1px solid var(--line); background: linear-gradient(180deg, #1a2230, #121a25);
+  border:1px solid var(--line); background: linear-gradient(180deg, #930000, #930000);
   color: var(--text); padding:.7rem 1rem; border-radius: 14px; font-weight: 600; box-shadow: var(--shadow);
 }
 .btn:hover{ transform: translateY(-1px) }
@@ -174,7 +174,7 @@ select{ appearance: none; background-image: linear-gradient(45deg,transparent 50
 .about{ display:grid; grid-template-columns: .9fr 1.1fr; gap: 1.4rem; align-items:center }
 .about-media{
   min-height: 320px; border-radius: var(--radius-lg);
-  background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  background: url('img/headshot12.png') center/cover no-repeat;
   border:1px solid var(--line); box-shadow: var(--shadow);
 }
 .about-copy .stats{ display:flex; gap:1.2rem; margin:1rem 0; padding:0; list-style:none }
@@ -199,9 +199,20 @@ blockquote{ margin:0; font-style: italic }
 .error{ color: #ffb4b4; min-height: 1.1em; display:block }
 
 /* Footer */
-.site-footer{ border-top:1px solid var(--line); padding:1.1rem 0; margin-top:2rem; background: rgba(152, 5, 5, 0.75) }
+.site-footer{ border-top:1px solid var(--line); padding:1.1rem 0; margin-top:2rem; background: #980505bf }
 .footer-inner{ display:flex; align-items:center; justify-content:space-between; gap:.8rem; flex-wrap: wrap }
 .site-footer a{ color: var(--muted); margin-right:.9rem }
+
+#socials-container
+ {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 2rem;
+    align-items: center;
+    font-size: 2rem;
+    color: #980505bf;
+}
 
 /* Modal */
 .modal{ position:fixed; inset:0; display:grid; place-items:center; background: rgba(0,0,0,.6); padding: 1rem }
@@ -222,4 +233,4 @@ blockquote{ margin:0; font-style: italic }
 
 /* Utility */
 .link{ text-decoration: underline dotted; text-underline-offset: 2px; color: var(--muted) }
-.lede{ color: #c9d6e6 }
+.lede{ color: #000 }
